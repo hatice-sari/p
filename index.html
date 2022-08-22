@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Prüfziffer berechnen</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			
+            "use strict";
+			
+            function rechne() {
+				
+                var vZahl1;
+				var vZahl2;
+				var vZahl3;
+				var vZahl4;
+				var vZahl5;
+				var vZahl6;
+				var vZahl7;
+				var vZahl8;
+				var vZahl9;
+				var vZahl10;
+				var vZahl11;
+				var vZahl12;
+				var vPruefsumme;
+				var vPruefziffer;
+				var vAusgabe;
+				
+				vZahl1=parseFloat(document.getElementById("idZahl1").value);
+				vZahl2=parseFloat(document.getElementById("idZahl2").value);
+				vZah3=parseFloat(document.getElementById("idZahl3").value);
+				vZahl4=parseFloat(document.getElementById("idZahl4").value);
+				vZahl5=parseFloat(document.getElementById("idZahl5").value);
+				vZahl6=parseFloat(document.getElementById("idZahl6").value);
+				vZahl7=parseFloat(document.getElementById("idZahl7").value);
+				vZahl8=parseFloat(document.getElementById("idZahl8").value);
+				vZahl9=parseFloat(document.getElementById("idZahl9").value);
+				vZahl10=parseFloat(document.getElementById("idZahl10").value);
+				vZahl11=parseFloat(document.getElementById("idZahl11").value);
+				vZahl12=parseFloat(document.getElementById("idZahl12").value);
+				
+								
+				vPruefsumme=(vZahl1*1)+(vZahl2*3)+(vZahl3*1)+(vZahl4*3)+(vZahl5*1)+(vZahl6*3)+(vZahl7*1)+(vZahl8*3)+(vZahl9*1)+(vZahl10*3)+(vZahl11*1)+(vZahl12*3);
+				
+				vPruefziffer=10-(vPruefsumme%10);
+				
+				if(vPruefziffer==10){
+				
+					vPruefziffer=0;
+				
+				}
+				
+				vAusgabe= "Die Pruefsumme ist: " +vPruefsumme+ " und die Pruefziffer ist: " +vPruefziffer;
+				
+				document.getElementById("idAusgabe").innerHTML=vAusgabe;
+				
+			}	
+			
+		</script>
+	</head>
+
+	<body>
+		<h1>Prüfziffer berechnen</h1>
+		Europäische Artikelnummer: 
+		<input id="idZahl1" type="text" maxlength="1" size="1" value="0">
+		<input id="idZahl2" type="text" maxlength="1" size="1" value="0">
+		<input id="idZahl3" type="text" maxlength="1" size="1" value="0">
+		<input id="idZahl4" type="text" maxlength="1" size="1" value="1">
+		<input id="idZahl5" type="text" maxlength="1" size="1" value="9">
+		<input id="idZahl6" type="text" maxlength="1" size="1" value="6">
+		<input id="idZahl7" type="text" maxlength="1" size="1" value="0">
+		<input id="idZahl8" type="text" maxlength="1" size="1" value="2">
+		<input id="idZahl9" type="text" maxlength="1" size="1" value="1">
+		<input id="idZahl10" type="text" maxlength="1" size="1" value="1">
+		<input id="idZahl11" type="text" maxlength="1" size="1" value="1">
+		<input id="idZahl12" type="text" maxlength="1" size="1" value="3">
+		
+		
+		</br> 
+		</br> 
+		<button onClick="rechne();">Berechne die Prüfziffer!</button>
+		</br> 
+		</br> 
+		<div id="idAusgabe"></div>
+	</body>
+</html>
